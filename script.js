@@ -4,8 +4,6 @@ var uppercaseChar = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 var numbericChar = ["0","1","2","3","4","5","6","7","8","9"];
 var specialChar = ["!","#","$","%","&","(",")","*","+","-",".","/",":","<","=",">","?","@","[","^"];
 
-document.getElementById("password")
-document.getElementById("generate")
 
 
 // Assignment Code
@@ -31,10 +29,10 @@ function generatePassword() {
         alert("Please enter a number between 8 and 128");
         generatePassword()
       }
-    var lowerInput = confirm("Would you like to inclued lowercase? Select OK (for yes) or Cancel (for no)");   
-    var upperInput = confirm("Would you like to inclued uppercase?");
-    var numberInput = confirm("Would you like to inclued numbers?");
-    var specialInput = confirm("Would you like to inclued special characters?");
+    lowerInput = confirm("Would you like to inclued lowercase? Select OK (for yes) or Cancel (for no)");   
+    upperInput = confirm("Would you like to inclued uppercase?");
+    numberInput = confirm("Would you like to inclued numbers?");
+    specialInput = confirm("Would you like to inclued special characters?");
 }
   //return the generated password
 
@@ -46,14 +44,26 @@ generateBtn.addEventListener("click", writePassword);
 
 
 
+function randomInt(limit) {
+    return Math.floor(Math.random() * Math.floor(limit))
+}
+
+function random(selection) {
+  var index = randomInt(selection.length);
+  return selection[index];
+}
+
+
   // var userInput = (lowerInput + upperInput + numberInput + specialInput);
 
-
+  var charArrayChoice = "";
   
-  // const charArrayChoice = 
-  
-  // const totalCharArray = lowercaseChar.concat(uppercaseChar,numbericChar,specialChar);
+  var totalCharArray = lowercaseChar.concat(uppercaseChar,numbericChar,specialChar);
 
+  for (var i = 0; i < 128; i++) {
+      charArrayChoice += random(totalCharArray);
+  }
+console.log(charArrayChoice);
 //   function random_item(items)
 // {
 //     return items[Math.floor(Math.random()*items.length)];
