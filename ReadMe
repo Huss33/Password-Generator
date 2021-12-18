@@ -1,0 +1,8 @@
+Random number generator.
+Select the number of characters you desire for your new secure password.
+If you selection is not between 7 and 129, you will be prompt to re-input your selection accordingly.
+However, once this happens and you continue through the prompts, no matter what I do you will get an undefined answer.
+This is resolved by simply refreshing the page and entering a valid number of characters (8-128).
+Prompts for character genres follow. Select desired genres.
+If none are chosen by user, all will be selected and a password will be given. 
+I do find some inconsistency in this generator, however, all inconsistencies seem to be rectified the refreshing of the page.
